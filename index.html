@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style/styling.css" />
+    <title>Home</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/book.svg"
+      type="image/png"
+    />
+  </head>
+  <body onload="loadGrid('displayConatiner')">
+    <div class="container">
+      <header>
+        <img src="./assets/images/logo.png" alt="" id="logoImg" />
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookStock.html">Book Stock</a>
+          </li>
+          <!---- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>-->
+        </ul>
+      </header>
+      <hr class="dividLine" />
+      <div class="infoDiv">
+        <div class="rightDiv">
+          <h1>Book Stock</h1>
+          <p>
+            All your technical books in ONE place, latest books versions,
+            updated continously!<br />
+            Free Dilevery World Wild! <br />
+            Billions of satisfied Costumers!<br />
+            Easliy Sell your Books Online
+          </p>
+        </div>
+        <img
+          src="./assets/images/books-collection.png"
+          alt="books collection"
+          id="booksCollection"
+        />
+      </div>
+      <hr id="dividLine" />
+      <div class="main">
+        <div class="displayOptions">
+          <button type="button" class="btn btn-secondary btns" id="gridBtn">
+            <i class="bi bi-grid-fill"></i>
+          </button>
+          <button type="button" class="btn btn-secondary btns" id="listBtn" >
+            <i class="bi bi-list-ul"></i>
+          </button>
+          <button type="button" class="btn btn-secondary btns" id="carouselBtn">
+            <i class="bi bi-images"></i>
+          </button>
+        </div>
+
+        <div class="input-group mb-3">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon1">
+            Search
+          </button>
+          <input
+            type="text"
+            class="form-control"
+            placeholder=""
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"/>
+        </div>
+        <div>
+                  <!-------------------------------------SORT BUTTONS-------------------------->
+                    <i class="bi bi-sort-up sortBtns"  id="sortUp"></i>
+                    <i class="bi bi-sort-down sortBtns"  id="sortDown"></i>
+        </div>
+      </div>
+      <div id="displayConatiner">
+       
+
+      </div>
+    </div>
+    <script src="./js/components/cardGrid.component.js"></script>
+    <script src="./js/components/carousela.component.js"></script>
+    <script src="./js/components/list.component.js"></script>
+    <script src="./js/models/BookClass.model.js"></script>
+    <script src="./js/dataIntializationstatic.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+#logoImg{
+width: 150px;
+}
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(59,74,91,1) 100%); 
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 0.5rem auto;
+    background-color: rgba(255, 255, 255, 0.703);
+}
+.dividLine{
+width: 95%;
+margin: 0.2rem auto;
+background-color: black;
+}
+.infoDiv{
+height: 20rem;
+display: flex;flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+.rightDiv{
+    display: flex;flex-direction: column;
+    justify-content: center;
+
+    h1{
+        font-size: 30pt;
+    }
+
+    p{
+        font-size: 18pt;
+    }
+}
+#booksCollection{
+    width: 20rem;
+    height: 15rem;
+}
+.btn{
+    width: 4rem !important;
+    opacity: 0.9;
+
+    i{
+        font-size: 18pt !important;
+    }
+}
+.btns{
+    color: black !important;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.input-group{
+    width: 35rem !important;
+
+   .btn-outline-secondary{
+        background-color: #eeaeca !important;
+        color: black !important;
+        font-weight: bolder;
+        display: flex;justify-content: center;
+        align-items: center;
+    }
+}
+.active{
+    font-weight: bolder !important;
+  color:black !important;
+}
+#addBTN{
+    width: 6rem !important;
+    background-color: #eeaeca !important;
+    color: black !important;
+    border-color: black !important;
+}
+.gridClass{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px !important;
+    height:max-content
+}
+.priceTag,.bookPrice{
+    height: fit-content;
+    background-color: green !important;
+    color:white;
+    width: fit-content;
+    padding: 0.2rem 1rem;
+    border-radius: 1.5rem;
+}
+
+.card-img-top{
+  height: 270px;
+}
+
+.sortBtns{
+font-size: 20pt !important;
+padding: 0.2rem 0.5rem;
+border: 1px solid black;
+border-radius: 0.5rem;
+background: rgb(238,174,202);
+}
+span{
+    font-size: 20pt !important;
+}
+.hidden{
+    display: none !important;
+}
+
+.carImg{
+    width: 200px !important;
+}
+
+.carousela{
+    height: 30rem !important;
+   display: flex !important;
+   align-items: center;
+   justify-content: center;
+   width: inherit !important;
+}
+.imgsContainer{
+    flex: 1;
+    display: flex !important;
+    gap: 0.5rem;
+    flex-direction:row !important;
+    width: inherit !important;
+    align-items: center;justify-content: center;
+    overflow:hidden;
+ }
+
+ .arrows{
+    height: 3rem; width: 5rem;  padding:0.5rem;z-index: 1000;
+    &:hover{
+        cursor: pointer;
+        background-color: gray;
+      
+    }
+ }
+.activeImg{
+    display: block;
+    opacity: 1;
+    height: 20rem !important;
+    width: 15rem !important;
+    z-index: 100;
+    overflow-block:initial;
+}
+.not-active{
+    opacity: 0.7;
+   z-index: 0;
+}
+ .imgSize{
+    height: 15rem !important;
+    width: 12rem !important;
+ }
+.listItem{
+    background-color: rgba(255, 255, 255, 0.993);
+    width: 80%;height:  fit-content !important;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 0.3fr;
+    grid-template-rows: repeat(3,2.5rem);
+    row-gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+ }
+.listImg{
+width: 5rem;
+grid-row: 1/4 !important;
+justify-self:center;
+align-self:flex-start;
+}
+.btns{
+    background-color: #eeaeca !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.bookKeysword{
+    height: fit-content !important;
+}
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+ align-items: center !important;
+ justify-content: center !important;
+}
+.bookName{
+    font-weight: bolder;
+}
+/*bookAuthor
+bookDate*/
+.bookKeysword{
+    color:#eeaeca;
+    font-weight: bolder;
+}
