@@ -42,35 +42,34 @@
         </ul>
       </header>
       <hr class="dividLine" />
-        <form class="row g-3">
+        <form class="row g-3" onsubmit="handleFormData(event)">
             <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Book Name</label>
-              <input type="text" class="form-control" id="addBookName">
+              <input type="text" class="form-control" id="addBookName" placeholder="Book Name" required>
             </div>
             <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Author Name</label>
-              <input type="text" class="form-control" id="addAuthorName">
+              <input type="text" class="form-control" id="addAuthorName" placeholder="Author Name" required>
             </div>
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Price</label>
-                <input type="number" class="form-control" id="addBookPrice">
+                <input type="number" class="form-control" id="addBookPrice" placeholder="Price" required>
               </div>
               <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Release Date</label>
-                <input type="text" class="form-control" id="addRealeseDate">
+                <input type="text" class="form-control" id="addRealeseDate" placeholder="Release Date" required>
               </div>
 
               <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Keyword</label>
-                <input type="number" class="form-control" id="addBookKeyword">
+                <input type="text" class="form-control" id="addBookKeyword" placeholder="Keyword">
               </div>
+
               <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Book Id</label>
-                <input type="text" class="form-control" id="addbookId" disabled>
+                <input type="text" class="form-control" id="addBookUrl" placeholder="Image URL" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="number" class="form-control" id="addbookId"  placeholder="Book Id"  disabled>
               </div>
 
             <div class="col-12">
-              <button type="submit" class="btn btn-primary" id="addBTN">Add Book</button>
+              <button type="submit" class="btn btn-primary" id="addBookBtn">Add Book</button>
             </div>
           </form>
           <hr class="dividLine" />
@@ -84,6 +83,7 @@
     <script src="./js/models/BookClass.model.js"></script>
     <script src="./js/dataIntializationstatic.js"></script>
     <script src="./js/createBooks.js"></script>
+    <script src="./js/bookStockFunctionality.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
