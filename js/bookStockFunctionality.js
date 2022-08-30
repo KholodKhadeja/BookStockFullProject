@@ -1,6 +1,6 @@
 let lastIdNum;
 const claculateTheLastId =() =>{
-    lastIdNum=+clonedArray[clonedArray.length-1].id + 1; //not stored in the local storag, its a normal array
+    lastIdNum=+clonedArray[clonedArray.length-1].id + 2; //not stored in the local storag, its a normal array
     return lastIdNum;
   }
   
