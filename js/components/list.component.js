@@ -1,8 +1,7 @@
-const loadList = (displayContainerId) =>{
+const loadList = (displayContainerId,arr) =>{
     const displayDiv=document.getElementById(displayContainerId);
       let htmlCode='';
-      let bookImportedArray=JSON.parse(localStorage.getItem("clonedArr"));
-      for(let bookItem of bookImportedArray){
+      for(let bookItem of clonedArray){
         htmlCode+=`<div class="listItem listGrid">
           <img src="${bookItem.imgUrl}" class="listImg">
           <p class="bookName">${bookItem.name}</p>
@@ -20,13 +19,11 @@ const loadList = (displayContainerId) =>{
   displayDiv.innerHTML=htmlCode;
 };
 
-
 const editListItem=(elementID)=>{
 
 };
-
 const delListItem=(elementID)=>{
-  bookImportedArray.splice(elementID,1);
-  loadList(bookImportedArray);
+  clonedArray.splice(elementID,1);
+  loadList("bookStockPageCardsImages");
   document.getElementById("addbookId").value=+lastIdNum+1;
 }

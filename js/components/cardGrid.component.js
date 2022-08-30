@@ -3,7 +3,7 @@ const loadGrid = (containerDisplay) =>{
   contianerDiv.classList.add("gridClass");
   let bookImportedArray=JSON.parse(localStorage.getItem("OriginalArray"));
 
-    for(let bookItem of bookImportedArray){
+    for(let bookItem of clonedArray){
         contianerDiv.innerHTML+=`
         <div class="card" style="width: 18rem;">
         <img src="${bookItem.imgUrl}" class="card-img-top" alt="...">

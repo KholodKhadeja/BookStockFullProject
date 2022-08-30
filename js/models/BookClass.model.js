@@ -6,7 +6,7 @@ class Book{
     realeseDate;
     keywords;
     id;
-    constructor(name,price,author,imgUrl,realeseDate,keywords=[],id){
+    constructor(name,price,author,imgUrl,realeseDate,keywords,id){
         this.name=name;
         this.price=price;
         this.author=author;
