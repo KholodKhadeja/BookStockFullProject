@@ -1,5 +1,5 @@
-let bookImportedArray=  JSON.parse(localStorage.getItem("OriginalArray"));
-let lastIdNum=bookImportedArray[bookImportedArray.length-1].id;
+let clonedArray=JSON.parse(localStorage.getItem("clonedArr"));
+let lastIdNum=clonedArray[clonedArray.length-1].id;
 
 document.getElementById("addbookId").value=+lastIdNum+1;
 /*************************************** FORM INPUTS ***********************************/
@@ -17,10 +17,12 @@ formBookName.addEventListener('input', ()=>{
 
 const handleFormData=(event)=>{
    event.preventDefault();
-       bookImportedArray=[...bookImportedArray,
-        new Book(formBookName.value, formBookPrice.value, formBookAuthorName.value,formBookImgUrl.value,formBookDate.value,
+      clonedArray =[...clonedArray,
+        new Book(formBookName.value, formBookPrice.value, formBookAuthorName.value,formBookImgUrl.value,
+        formBookDate.value,
         formBookKeywords.value, +lastIdNum+1)];
-        localStorage.setItem("OriginalArray",bookImportedArray);
+        localStorage.setItem("clonedArr",JSON.stringify(clonedArray));
+        document.getElementsByClassName("form-control").value=null;
         loadList("bookStockPageCardsImages");
 };
 

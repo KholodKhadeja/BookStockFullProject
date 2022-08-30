@@ -41,19 +41,6 @@ new Book("Eloquent Javascript, 3rd Edition : A Modern Introduction to Programmin
 "01 Dec 2020",
 ["js"],
 "4"
-),
-new Book("Eloquent Javascript, 3rd Edition : A Modern Introduction to Programming",
-115,
-"Marijn Haverbeke",
-"https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/5932/9781593279509.jpg",
-"01 Dec 2020",
-["js"],
-"5"
-)
-];
+)];
 localStorage.setItem("OriginalArray",JSON.stringify(bookArr));
-
-
-/*DEEP CLONE THE ORIGINAL ARRAY*/
-let clonedArray=JSON.parse(JSON.stringify(localStorage.getItem("OriginalArray")));
-console.log("clonedArray",clonedArray);
+localStorage.setItem("clonedArr",JSON.stringify(bookArr));

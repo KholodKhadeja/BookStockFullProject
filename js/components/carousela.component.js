@@ -1,10 +1,9 @@
 let currentFirstImage=0;
-
 const displayDiv=document.getElementById("displayConatiner");
 const loadCarousel = (currentIndex=0) =>{
+  let bookImportedArray=JSON.parse(localStorage.getItem("clonedArr"));
+
   currentIndex=currentFirstImage;
-    let bookImportedArray=localStorage.getItem("OriginalArray");
-    bookImportedArray=JSON.parse(bookImportedArray);
     buildCarousel(currentIndex,bookImportedArray);
 
     document.getElementById("leftArrow").addEventListener("click",()=>{

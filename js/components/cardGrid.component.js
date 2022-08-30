@@ -1,8 +1,7 @@
 const loadGrid = (containerDisplay) =>{
   let contianerDiv=document.getElementById(`${containerDisplay}`);
   contianerDiv.classList.add("gridClass");
-  let bookImportedArray=localStorage.getItem("OriginalArray");
-  bookImportedArray=JSON.parse(bookImportedArray);
+  let bookImportedArray=JSON.parse(localStorage.getItem("OriginalArray"));
 
     for(let bookItem of bookImportedArray){
         contianerDiv.innerHTML+=`
