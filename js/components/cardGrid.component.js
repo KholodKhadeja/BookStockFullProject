@@ -1,7 +1,6 @@
 const loadGrid = (containerDisplay) =>{
   let contianerDiv=document.getElementById(`${containerDisplay}`);
   contianerDiv.classList.add("gridClass");
-  let bookImportedArray=JSON.parse(localStorage.getItem("OriginalArray"));
 
     for(let bookItem of clonedArray){
         contianerDiv.innerHTML+=`
@@ -16,10 +15,6 @@ const loadGrid = (containerDisplay) =>{
           <li class="list-group-item"><b>Release Date:</b>${bookItem.realeseDate}</li>
           <li class="list-group-item"><b>Keywords:</b> ${bookItem.keywords}</li>  
         </ul>
-        <div class="card-body">
-          <a href="#" class="card-link" onclick="editBook()"><i class="bi bi-pencil-square"></i> Edit</a>
-          <a href="#" class="card-link" onclick="deleteBook()"><i class="bi bi-trash-fill"></i> Delete</a>
-        </div>
       </div>`;
 }
 };

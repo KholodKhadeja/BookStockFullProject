@@ -20,6 +20,10 @@ header {
   background-color: rgba(255, 255, 255, 0.703);
 }
 
+#displayConatiner {
+  width: 80% !important;
+}
+
 .dividLine {
   width: 95%;
   margin: 0.2rem auto;
@@ -64,13 +68,35 @@ header {
 }
 
 .main {
+  padding: 1rem;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem;
+}
+
+#leftMain {
   display: flex;
-  flex-direction: row;
+  width: 30% !important;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#rightMain {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+}
+
+#rightUpper {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .input-group {
-  width: 35rem !important;
+  width: 20rem !important;
 }
 .input-group .btn-outline-secondary {
   background-color: #eeaeca !important;
@@ -94,18 +120,22 @@ header {
 }
 
 .gridClass {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  width: 100% !important;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px !important;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 250px !important;
 }
 
 .priceTag, .bookPrice {
@@ -122,7 +152,7 @@ header {
 }
 
 .card-img-top {
-  height: 270px;
+  height: 200px;
 }
 
 .sortBtns {
@@ -142,25 +172,25 @@ span {
 }
 
 .carImg {
-  width: 200px !important;
+  width: 100px !important;
 }
 
 .carousela {
   height: 30rem !important;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: inherit !important;
 }
 
 .imgsContainer {
-  flex: 1;
   display: flex !important;
   gap: 0.5rem;
   flex-direction: row !important;
-  width: inherit !important;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   overflow: hidden;
 }
 
@@ -178,25 +208,20 @@ span {
 .activeImg {
   display: block;
   opacity: 1;
-  height: 20rem !important;
-  width: 15rem !important;
+  height: 15rem !important;
   z-index: 100;
   overflow-block: initial;
 }
 
 .not-active {
+  height: 12rem;
   opacity: 0.7;
   z-index: 0;
 }
 
-.imgSize {
-  height: 15rem !important;
-  width: 12rem !important;
-}
-
 .listItem {
   background-color: rgba(255, 255, 255, 0.993);
-  width: 80%;
+  width: 100%;
   height: -webkit-fit-content !important;
   height: -moz-fit-content !important;
   height: fit-content !important;
@@ -236,6 +261,7 @@ span {
 }
 
 .flexContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center !important;
@@ -251,4 +277,38 @@ bookDate*/
 .bookKeysword {
   color: #eeaeca;
   font-weight: bolder;
+}
+
+#loginBtn {
+  background-color: #eeaeca;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  width: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px !important;
+  font-weight: bold;
+}
+
+#AddBookDiv, #SearchBookDiv {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px !important;
+}
+#AddBookDiv p, #SearchBookDiv p {
+  font-weight: bolder;
+  margin-bottom: -5px;
+}
+#AddBookDiv span, #SearchBookDiv span {
+  font-size: 12pt !important;
+}
+
+#addBookToStock {
+  background-color: #eeaeca;
+  border-color: black !important;
+  color: black !important;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  width: 10rem !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px !important;
+  font-weight: bold;
 }/*# sourceMappingURL=styling.css.map */

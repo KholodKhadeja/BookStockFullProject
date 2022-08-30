@@ -1,4 +1,5 @@
 const loadList = (displayContainerId,arr) =>{
+  initArray();
     const displayDiv=document.getElementById(displayContainerId);
       let htmlCode='';
       for(let bookItem of clonedArray){

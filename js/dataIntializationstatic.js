@@ -1,8 +1,9 @@
 /*intial Data - it is posible to add other book via the other page*/
 let clonedArray;
-let bookArr=[
+const buildIntialDataArray =() =>{
+  let bookArr=[
     /*book 1*/
-    new Book("Web Design with HTML, CSS, JavaScript and jQuery",
+    new Book("Web Design with HTML, CSS, JS",
     140,
     "Jon Duckett",
    "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/1189/9781118907443.jpg",
@@ -43,7 +44,8 @@ new Book("Eloquent Javascript, 3rd Edition : A Modern Introduction to Programmin
 "4"
 )];
 localStorage.setItem("OriginalArray",JSON.stringify(bookArr));
-clonedArray = _.cloneDeep(bookArr);
+};
+buildIntialDataArray();
 
 const initArray=() =>{
     realArr = localStorage.getItem("OriginalArray");
@@ -55,5 +57,4 @@ const initArray=() =>{
     }
    clonedArray = _.cloneDeep(realArr);
   };
-
   initArray();
