@@ -1,9 +1,15 @@
 let currentFirstImage=0;
 const displayDiv=document.getElementById("displayConatiner");
+
 const loadCarousel = (currentIndex=0) =>{
+  mainDisplayContainer.innerHTML='';
+  sortDiv.classList.add("not-visible");
+  displayDiv.classList.remove("gridClass");
+  displayDiv.classList.remove("flexContainer");
+  searchDiv.classList.add("hidden");
 
   currentIndex=currentFirstImage;
-    buildCarousel(currentIndex,clonedArray);
+    buildCarousel(currentIndex,bookArr);
 
     document.getElementById("leftArrow").addEventListener("click",()=>{
       currentFirstImage--;

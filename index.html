@@ -80,7 +80,10 @@
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-           <button id="loginBtn">Login</button>
+            <button id="loginBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" 
+            data-bs-target="#LoginModal">
+              Login
+            </button>
           </li>
           <!---- <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -118,11 +121,26 @@
 
     <div id="SearchBookDiv">
       <p>Search</p>
-      <span>by name, author, price, keyword</span>
+      <span>* Search only by name</span>
       <div class="input-group mb-3">
         <button class="btn btn-outline-secondary" type="button"  id="button-addon1"> Search</button>
-        <input type="text" class="form-control" placeholder="" />
+        <input type="text" class="form-control" placeholder="" id="searchInputWord" oninput="showFillList()"/>
       </div>  
+     <!---- <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+        checked>
+        <label class="btn btn-outline-primary" for="btnradio1">Name</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+        <label class="btn btn-outline-primary" for="btnradio2">Author</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
+        <label class="btn btn-outline-primary" for="btnradio3">Price</label>
+    
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" >
+        <label class="btn btn-outline-primary" for="btnradio4">Keyword</label>
+      </div>--->
+
       </div>
 
 
@@ -143,8 +161,8 @@
 
     <div id="sortGroup">
       <!-------------------------------------SORT BUTTONS-------------------------->
-        <i class="bi bi-sort-up sortBtns"  id="sortUp"></i>
-        <i class="bi bi-sort-down sortBtns"  id="sortDown"></i>
+        <i class="bi bi-sort-up sortBtns"  id="sortUp" onclick="sortBooks('U')"></i>
+        <i class="bi bi-sort-down sortBtns"  id="sortDown" onclick="sortBooks('D')"></i>
 </div>
   </div>
   <div id="displayConatiner" >
@@ -153,13 +171,46 @@
   </div>
 </div>
     </div>
+
+<!----------------------------------------------------------------Login Modal-------------------------------------------->
+<div class="modal" tabindex="-1" id="LoginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body login-modal-bd">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" >Usename</span>
+          <input type="text" class="form-control" id="usernameInp" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Password</span>
+          <input type="password" id="passwordInp" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="loginBtnModal">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------->
+
+
+
  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
     <script src="./js/models/BookClass.model.js"></script>
+    <script src="./js/models/usersClass.model.js"></script>
+    <script src="./js/users.js"></script>
     <script src="./js/dataIntializationstatic.js"></script>
     <script src="./js/components/cardGrid.component.js"></script>
     <script src="./js/components/carousela.component.js"></script>
     <script src="./js/components/list.component.js"></script>
+    <script src="./js/searchSession.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

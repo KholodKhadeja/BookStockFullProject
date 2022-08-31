@@ -18,6 +18,7 @@ header{
 }
 #displayConatiner{
     width: 80% !important;
+    align-self: center !important;
 }
 .dividLine{
 width: 95%;
@@ -109,7 +110,7 @@ padding: 1rem;
     grid-template-rows: auto;
     justify-content: space-around;
     align-items: center;
-    column-gap: 3rem;
+    column-gap: 4rem;
 }
 
 .card{
@@ -147,7 +148,8 @@ span{
     width: 100px !important;
 }
 .carousela{
-    height: 30rem !important;width: min-content;
+width: max-content;margin-left: -3.5rem;
+    height: 30rem !important;align-self: center !important;
    display: flex !important;
    align-items: center;
    justify-content: center;
@@ -227,10 +229,11 @@ bookDate*/
 }
 #loginBtn{
     background-color: #eeaeca;
+    color: black !important;
+    border-color: black !important;
     border-radius: 0.5rem;
-    padding: 0.2rem;
-    width:5rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px !important;
+    width:6rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px !important;
     font-weight: bold;
 }
 #AddBookDiv, #SearchBookDiv{
@@ -258,3 +261,35 @@ bookDate*/
     }
 
 
+    .btn-group{
+        width: 20rem !important;
+ .btn-check{
+        background-color: #eeaeca !important;
+        color: black !important;
+    }
+}
+.not-visible{
+    visibility: hidden;
+}
+
+.modal-body{
+     .input-group{
+        width: 20rem !important;
+}
+.input-group-text{
+font-size: 14pt !important;
+font-weight: bolder;
+background-color: #eeaeca;
+}
+}
+
+#loginBtnModal{
+    background-color: #eeaeca;
+    color: black !important;
+    border-color: black !important;
+}
+.login-modal-bd{
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

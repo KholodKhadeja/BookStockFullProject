@@ -1,8 +1,13 @@
 const loadGrid = (containerDisplay) =>{
+  mainDisplayContainer.innerHTML='';
+  sortDiv.classList.add("not-visible");
+
+  searchDiv.classList.add("hidden");
   let contianerDiv=document.getElementById(`${containerDisplay}`);
+  mainDisplayContainer.classList.remove("flexContainer");
   contianerDiv.classList.add("gridClass");
 
-    for(let bookItem of clonedArray){
+    for(let bookItem of bookArr){
         contianerDiv.innerHTML+=`
         <div class="card" style="width: 18rem;">
         <img src="${bookItem.imgUrl}" class="card-img-top" alt="...">
